@@ -1,0 +1,26 @@
+# truy cập container
+docker exec -it hotel_pg bash
+
+# Truy cập PostgreSQL CLI
+# admin: là user bạn đã cấu hình trong docker-compose.yml
+# hotel_db: là tên database bạn đã tạo
+psql -U admin -d hotel_db
+
+
+\dt         -- xem danh sách bảng
+SELECT * FROM Users;  -- truy vấn dữ liệu
+\q          -- thoát khỏi psql
+exit        -- thoát khỏi container
+
+
+\d users
+\d rooms
+\d bookings
+\d reviews
+\d hotels
+\d payments
+\d roles
+
+
+select * from Users;
+select * from Roles;
